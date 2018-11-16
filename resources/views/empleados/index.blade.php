@@ -13,6 +13,17 @@
       <th>Departamento</th>
       <th>Responsable del proyecto</th>
     </tr>
+
+    @foreach($empleados as $empleado)
+      <tr>
+        <td>{{ $empleado->id }}</td>
+        <td>{{ $empleado->nombre . '/' . $empleado->apellido1 }}</td>
+        <td><a href="/departamento/{{ $empleado->departamento->id }}">{{ $empleado->departamento->nombre }}</a></td>
+        @if(isset($empleado->proyecto))
+          <td><a href="/empleado/{{ $empleado->proyecto->id }}">{{ $empleado->proyecto->nombre }}</a></td>
+        @endif
+      </tr>
+    @endforeach
   </table>
 
 @endsection

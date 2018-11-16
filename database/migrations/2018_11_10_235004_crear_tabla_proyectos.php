@@ -17,8 +17,6 @@ class CrearTablaProyectos extends Migration
             $table->increments('id');
             $table->string('nombre')->unique();
             $table->string('titulo');
-            $table->date('fechainicio');
-            $table->date('fechafin');
             $table->integer('horasestimadas');
             $table->timestamps();
         });
