@@ -16,5 +16,6 @@
       <p><a href="/proyecto/{{ $proyecto->id }}">{{ $proyecto->nombre }} - {{ $proyecto->pivot->fechainicio }} - {{ $proyecto->pivot->fechafin }}</a></p>
     @endforeach
   @endif
-
+  <br /><br />
+  <a href="/formEmpleado">Añadir nuevo empleado</a>
 @endsection

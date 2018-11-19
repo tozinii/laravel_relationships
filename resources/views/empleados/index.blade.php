@@ -25,5 +25,7 @@
       </tr>
     @endforeach
   </table>
+  <br /><br />
+  <a href="/formEmpleado">Añadir nuevo empleado</a>
 
 @endsection
