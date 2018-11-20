@@ -13,7 +13,7 @@
   <h3>Colabora en los siguientes proyectos:</h3>
   @if(isset($empleado->proyectos))
     @foreach($empleado->proyectos as $proyecto)
-      <p><a href="/proyecto/{{ $proyecto->id }}">{{ $proyecto->nombre }} - {{ $proyecto->pivot->fechainicio }} - {{ $proyecto->pivot->fechafin }}</a></p>
+      <p><a href="/proyecto/{{ $proyecto->id }}">{{ $proyecto->nombre }} </a><b>Fecha Inicio: </b>{{ date('d-m-y', strtotime($proyecto->pivot->fechainicio)) }} <b>Fecha Fin: </b>{{ date('d-m-y', strtotime($proyecto->pivot->fechafin)) }}</p>
     @endforeach
   @endif
   <br /><br />
